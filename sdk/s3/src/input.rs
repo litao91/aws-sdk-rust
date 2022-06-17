@@ -142,7 +142,7 @@ impl AbortMultipartUploadInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}/{Key}", Bucket = bucket, Key = key)
+                write!(output, "/{Key}", Bucket = bucket, Key = key)
                     .expect("formatting should succeed");
                 Ok(())
             }
@@ -384,7 +384,7 @@ impl CompleteMultipartUploadInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}/{Key}", Bucket = bucket, Key = key)
+                write!(output, "/{Key}", Bucket = bucket, Key = key)
                     .expect("formatting should succeed");
                 Ok(())
             }
@@ -1240,7 +1240,7 @@ impl CopyObjectInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}/{Key}", Bucket = bucket, Key = key)
+                write!(output, "/{Key}", Bucket = bucket, Key = key)
                     .expect("formatting should succeed");
                 Ok(())
             }
@@ -1533,7 +1533,7 @@ impl CreateBucketInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             #[allow(clippy::unnecessary_wraps)]
@@ -2142,7 +2142,7 @@ impl CreateMultipartUploadInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}/{Key}", Bucket = bucket, Key = key)
+                write!(output, "/{Key}", Bucket = bucket, Key = key)
                     .expect("formatting should succeed");
                 Ok(())
             }
@@ -2309,7 +2309,7 @@ impl DeleteBucketInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             #[allow(clippy::unnecessary_wraps)]
@@ -2478,7 +2478,7 @@ impl DeleteBucketAnalyticsConfigurationInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -2647,7 +2647,7 @@ impl DeleteBucketCorsInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -2811,7 +2811,7 @@ impl DeleteBucketEncryptionInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -2977,7 +2977,7 @@ impl DeleteBucketIntelligentTieringConfigurationInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -3158,7 +3158,7 @@ impl DeleteBucketInventoryConfigurationInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -3327,7 +3327,7 @@ impl DeleteBucketLifecycleInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -3506,7 +3506,7 @@ impl DeleteBucketMetricsConfigurationInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -3677,7 +3677,7 @@ impl DeleteBucketOwnershipControlsInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -3843,7 +3843,7 @@ impl DeleteBucketPolicyInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -4008,7 +4008,7 @@ impl DeleteBucketReplicationInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -4173,7 +4173,7 @@ impl DeleteBucketTaggingInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -4337,7 +4337,7 @@ impl DeleteBucketWebsiteInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -4582,7 +4582,7 @@ impl DeleteObjectInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}/{Key}", Bucket = bucket, Key = key)
+                write!(output, "/{Key}", Bucket = bucket, Key = key)
                     .expect("formatting should succeed");
                 Ok(())
             }
@@ -4748,7 +4748,7 @@ impl DeleteObjectInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}/{Key}", Bucket = bucket, Key = key)
+                write!(output, "/{Key}", Bucket = bucket, Key = key)
                     .expect("formatting should succeed");
                 Ok(())
             }
@@ -4971,7 +4971,7 @@ impl DeleteObjectsInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -5206,7 +5206,7 @@ impl DeleteObjectTaggingInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}/{Key}", Bucket = bucket, Key = key)
+                write!(output, "/{Key}", Bucket = bucket, Key = key)
                     .expect("formatting should succeed");
                 Ok(())
             }
@@ -5375,7 +5375,7 @@ impl DeletePublicAccessBlockInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -5542,7 +5542,7 @@ impl GetBucketAccelerateConfigurationInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -5708,7 +5708,7 @@ impl GetBucketAclInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -5886,7 +5886,7 @@ impl GetBucketAnalyticsConfigurationInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -6056,7 +6056,7 @@ impl GetBucketCorsInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -6220,7 +6220,7 @@ impl GetBucketEncryptionInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -6385,7 +6385,7 @@ impl GetBucketIntelligentTieringConfigurationInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -6566,7 +6566,7 @@ impl GetBucketInventoryConfigurationInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -6738,7 +6738,7 @@ impl GetBucketLifecycleConfigurationInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -6904,7 +6904,7 @@ impl GetBucketLocationInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -7068,7 +7068,7 @@ impl GetBucketLoggingInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -7246,7 +7246,7 @@ impl GetBucketMetricsConfigurationInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -7418,7 +7418,7 @@ impl GetBucketNotificationConfigurationInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -7585,7 +7585,7 @@ impl GetBucketOwnershipControlsInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -7750,7 +7750,7 @@ impl GetBucketPolicyInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -7914,7 +7914,7 @@ impl GetBucketPolicyStatusInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -8079,7 +8079,7 @@ impl GetBucketReplicationInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -8245,7 +8245,7 @@ impl GetBucketRequestPaymentInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -8410,7 +8410,7 @@ impl GetBucketTaggingInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -8574,7 +8574,7 @@ impl GetBucketVersioningInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -8738,7 +8738,7 @@ impl GetBucketWebsiteInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -9182,7 +9182,7 @@ impl GetObjectInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}/{Key}", Bucket = bucket, Key = key)
+                write!(output, "/{Key}", Bucket = bucket, Key = key)
                     .expect("formatting should succeed");
                 Ok(())
             }
@@ -9388,7 +9388,7 @@ impl GetObjectInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}/{Key}", Bucket = bucket, Key = key)
+                write!(output, "/{Key}", Bucket = bucket, Key = key)
                     .expect("formatting should succeed");
                 Ok(())
             }
@@ -9651,7 +9651,7 @@ impl GetObjectAclInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}/{Key}", Bucket = bucket, Key = key)
+                write!(output, "/{Key}", Bucket = bucket, Key = key)
                     .expect("formatting should succeed");
                 Ok(())
             }
@@ -9874,7 +9874,7 @@ impl GetObjectLegalHoldInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}/{Key}", Bucket = bucket, Key = key)
+                write!(output, "/{Key}", Bucket = bucket, Key = key)
                     .expect("formatting should succeed");
                 Ok(())
             }
@@ -10045,7 +10045,7 @@ impl GetObjectLockConfigurationInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -10265,7 +10265,7 @@ impl GetObjectRetentionInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}/{Key}", Bucket = bucket, Key = key)
+                write!(output, "/{Key}", Bucket = bucket, Key = key)
                     .expect("formatting should succeed");
                 Ok(())
             }
@@ -10490,7 +10490,7 @@ impl GetObjectTaggingInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}/{Key}", Bucket = bucket, Key = key)
+                write!(output, "/{Key}", Bucket = bucket, Key = key)
                     .expect("formatting should succeed");
                 Ok(())
             }
@@ -10699,7 +10699,7 @@ impl GetObjectTorrentInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}/{Key}", Bucket = bucket, Key = key)
+                write!(output, "/{Key}", Bucket = bucket, Key = key)
                     .expect("formatting should succeed");
                 Ok(())
             }
@@ -10864,7 +10864,7 @@ impl GetPublicAccessBlockInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -11033,7 +11033,7 @@ impl HeadBucketInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             #[allow(clippy::unnecessary_wraps)]
@@ -11371,7 +11371,7 @@ impl HeadObjectInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}/{Key}", Bucket = bucket, Key = key)
+                write!(output, "/{Key}", Bucket = bucket, Key = key)
                     .expect("formatting should succeed");
                 Ok(())
             }
@@ -11561,7 +11561,7 @@ impl ListBucketAnalyticsConfigurationsInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -11738,7 +11738,7 @@ impl ListBucketIntelligentTieringConfigurationsInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -11926,7 +11926,7 @@ impl ListBucketInventoryConfigurationsInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -12116,7 +12116,7 @@ impl ListBucketMetricsConfigurationsInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -12488,7 +12488,7 @@ impl ListMultipartUploadsInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -12765,7 +12765,7 @@ impl ListObjectsInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -13058,7 +13058,8 @@ impl ListObjectsV2Input {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                // write!(output, "/", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/").expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -13340,7 +13341,7 @@ impl ListObjectVersionsInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -13616,7 +13617,7 @@ impl ListPartsInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}/{Key}", Bucket = bucket, Key = key)
+                write!(output, "/{Key}", Bucket = bucket, Key = key)
                     .expect("formatting should succeed");
                 Ok(())
             }
@@ -13812,7 +13813,7 @@ impl PutBucketAccelerateConfigurationInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -14109,7 +14110,7 @@ impl PutBucketAclInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -14336,7 +14337,7 @@ impl PutBucketAnalyticsConfigurationInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -14550,7 +14551,7 @@ impl PutBucketCorsInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -14777,7 +14778,7 @@ impl PutBucketEncryptionInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -14991,7 +14992,7 @@ impl PutBucketIntelligentTieringConfigurationInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -15203,7 +15204,7 @@ impl PutBucketInventoryConfigurationInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -15409,7 +15410,7 @@ impl PutBucketLifecycleConfigurationInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -15634,7 +15635,7 @@ impl PutBucketLoggingInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -15857,7 +15858,7 @@ impl PutBucketMetricsConfigurationInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -16075,7 +16076,7 @@ impl PutBucketNotificationConfigurationInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -16287,7 +16288,7 @@ impl PutBucketOwnershipControlsInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -16525,7 +16526,7 @@ impl PutBucketPolicyInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -16762,7 +16763,7 @@ impl PutBucketReplicationInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -16991,7 +16992,7 @@ impl PutBucketRequestPaymentInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -17212,7 +17213,7 @@ impl PutBucketTaggingInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -17449,7 +17450,7 @@ impl PutBucketVersioningInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -17672,7 +17673,7 @@ impl PutBucketWebsiteInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -18351,7 +18352,7 @@ impl PutObjectInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}/{Key}", Bucket = bucket, Key = key)
+                write!(output, "/{Key}", Bucket = bucket, Key = key)
                     .expect("formatting should succeed");
                 Ok(())
             }
@@ -18511,7 +18512,7 @@ impl PutObjectInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}/{Key}", Bucket = bucket, Key = key)
+                write!(output, "/{Key}", Bucket = bucket, Key = key)
                     .expect("formatting should succeed");
                 Ok(())
             }
@@ -18867,7 +18868,7 @@ impl PutObjectAclInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}/{Key}", Bucket = bucket, Key = key)
+                write!(output, "/{Key}", Bucket = bucket, Key = key)
                     .expect("formatting should succeed");
                 Ok(())
             }
@@ -19149,7 +19150,7 @@ impl PutObjectLegalHoldInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}/{Key}", Bucket = bucket, Key = key)
+                write!(output, "/{Key}", Bucket = bucket, Key = key)
                     .expect("formatting should succeed");
                 Ok(())
             }
@@ -19406,7 +19407,7 @@ impl PutObjectLockConfigurationInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -19697,7 +19698,7 @@ impl PutObjectRetentionInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}/{Key}", Bucket = bucket, Key = key)
+                write!(output, "/{Key}", Bucket = bucket, Key = key)
                     .expect("formatting should succeed");
                 Ok(())
             }
@@ -19976,7 +19977,7 @@ impl PutObjectTaggingInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}/{Key}", Bucket = bucket, Key = key)
+                write!(output, "/{Key}", Bucket = bucket, Key = key)
                     .expect("formatting should succeed");
                 Ok(())
             }
@@ -20205,7 +20206,7 @@ impl PutPublicAccessBlockInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}", Bucket = bucket).expect("formatting should succeed");
+                write!(output, "/", Bucket = bucket).expect("formatting should succeed");
                 Ok(())
             }
             fn uri_query(
@@ -20472,7 +20473,7 @@ impl RestoreObjectInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}/{Key}", Bucket = bucket, Key = key)
+                write!(output, "/{Key}", Bucket = bucket, Key = key)
                     .expect("formatting should succeed");
                 Ok(())
             }
@@ -20861,7 +20862,7 @@ impl SelectObjectContentInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}/{Key}", Bucket = bucket, Key = key)
+                write!(output, "/{Key}", Bucket = bucket, Key = key)
                     .expect("formatting should succeed");
                 Ok(())
             }
@@ -21195,7 +21196,7 @@ impl UploadPartInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}/{Key}", Bucket = bucket, Key = key)
+                write!(output, "/{Key}", Bucket = bucket, Key = key)
                     .expect("formatting should succeed");
                 Ok(())
             }
@@ -21369,7 +21370,7 @@ impl UploadPartInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}/{Key}", Bucket = bucket, Key = key)
+                write!(output, "/{Key}", Bucket = bucket, Key = key)
                     .expect("formatting should succeed");
                 Ok(())
             }
@@ -21889,7 +21890,7 @@ impl UploadPartCopyInput {
                         details: "cannot be empty or unset",
                     });
                 }
-                write!(output, "/{Bucket}/{Key}", Bucket = bucket, Key = key)
+                write!(output, "/{Key}", Bucket = bucket, Key = key)
                     .expect("formatting should succeed");
                 Ok(())
             }
