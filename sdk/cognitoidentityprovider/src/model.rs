@@ -76,6 +76,7 @@ impl std::fmt::Debug for CustomDomainConfigType {
 }
 /// See [`CustomDomainConfigType`](crate::model::CustomDomainConfigType)
 pub mod custom_domain_config_type {
+
     /// A builder for [`CustomDomainConfigType`](crate::model::CustomDomainConfigType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -222,6 +223,10 @@ pub struct UserPoolClientType {
         std::option::Option<crate::model::PreventUserExistenceErrorTypes>,
     /// <p>Indicates whether token revocation is activated for the user pool client. When you create a new user pool client, token revocation is activated by default. For more information about revoking tokens, see <a href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_RevokeToken.html">RevokeToken</a>.</p>
     pub enable_token_revocation: std::option::Option<bool>,
+    /// <p>When <code>EnablePropagateAdditionalUserContextData</code> is true, Amazon Cognito accepts an <code>IpAddress</code> value that you send in the <code>UserContextData</code> parameter. The <code>UserContextData</code> parameter sends information to Amazon Cognito advanced security for risk analysis. You can send <code>UserContextData</code> when you sign in Amazon Cognito native users with the <code>InitiateAuth</code> and <code>RespondToAuthChallenge</code> API operations.</p>
+    /// <p>When <code>EnablePropagateAdditionalUserContextData</code> is false, you can't send your user's source IP address to Amazon Cognito advanced security with unauthenticated API operations. <code>EnablePropagateAdditionalUserContextData</code> doesn't affect whether you can send a source IP address in a <code>ContextData</code> parameter with the authenticated API operations <code>AdminInitiateAuth</code> and <code>AdminRespondToAuthChallenge</code>.</p>
+    /// <p>You can only activate <code>EnablePropagateAdditionalUserContextData</code> in an app client that has a client secret. For more information about propagation of user context data, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html#user-pool-settings-adaptive-authentication-device-fingerprint">Adding user device and session data to API requests</a>.</p>
+    pub enable_propagate_additional_user_context_data: std::option::Option<bool>,
 }
 impl UserPoolClientType {
     /// <p>The user pool ID for the user pool client.</p>
@@ -383,6 +388,12 @@ impl UserPoolClientType {
     pub fn enable_token_revocation(&self) -> std::option::Option<bool> {
         self.enable_token_revocation
     }
+    /// <p>When <code>EnablePropagateAdditionalUserContextData</code> is true, Amazon Cognito accepts an <code>IpAddress</code> value that you send in the <code>UserContextData</code> parameter. The <code>UserContextData</code> parameter sends information to Amazon Cognito advanced security for risk analysis. You can send <code>UserContextData</code> when you sign in Amazon Cognito native users with the <code>InitiateAuth</code> and <code>RespondToAuthChallenge</code> API operations.</p>
+    /// <p>When <code>EnablePropagateAdditionalUserContextData</code> is false, you can't send your user's source IP address to Amazon Cognito advanced security with unauthenticated API operations. <code>EnablePropagateAdditionalUserContextData</code> doesn't affect whether you can send a source IP address in a <code>ContextData</code> parameter with the authenticated API operations <code>AdminInitiateAuth</code> and <code>AdminRespondToAuthChallenge</code>.</p>
+    /// <p>You can only activate <code>EnablePropagateAdditionalUserContextData</code> in an app client that has a client secret. For more information about propagation of user context data, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html#user-pool-settings-adaptive-authentication-device-fingerprint">Adding user device and session data to API requests</a>.</p>
+    pub fn enable_propagate_additional_user_context_data(&self) -> std::option::Option<bool> {
+        self.enable_propagate_additional_user_context_data
+    }
 }
 impl std::fmt::Debug for UserPoolClientType {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -419,11 +430,16 @@ impl std::fmt::Debug for UserPoolClientType {
             &self.prevent_user_existence_errors,
         );
         formatter.field("enable_token_revocation", &self.enable_token_revocation);
+        formatter.field(
+            "enable_propagate_additional_user_context_data",
+            &self.enable_propagate_additional_user_context_data,
+        );
         formatter.finish()
     }
 }
 /// See [`UserPoolClientType`](crate::model::UserPoolClientType)
 pub mod user_pool_client_type {
+
     /// A builder for [`UserPoolClientType`](crate::model::UserPoolClientType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -456,6 +472,7 @@ pub mod user_pool_client_type {
         pub(crate) prevent_user_existence_errors:
             std::option::Option<crate::model::PreventUserExistenceErrorTypes>,
         pub(crate) enable_token_revocation: std::option::Option<bool>,
+        pub(crate) enable_propagate_additional_user_context_data: std::option::Option<bool>,
     }
     impl Builder {
         /// <p>The user pool ID for the user pool client.</p>
@@ -911,6 +928,23 @@ pub mod user_pool_client_type {
             self.enable_token_revocation = input;
             self
         }
+        /// <p>When <code>EnablePropagateAdditionalUserContextData</code> is true, Amazon Cognito accepts an <code>IpAddress</code> value that you send in the <code>UserContextData</code> parameter. The <code>UserContextData</code> parameter sends information to Amazon Cognito advanced security for risk analysis. You can send <code>UserContextData</code> when you sign in Amazon Cognito native users with the <code>InitiateAuth</code> and <code>RespondToAuthChallenge</code> API operations.</p>
+        /// <p>When <code>EnablePropagateAdditionalUserContextData</code> is false, you can't send your user's source IP address to Amazon Cognito advanced security with unauthenticated API operations. <code>EnablePropagateAdditionalUserContextData</code> doesn't affect whether you can send a source IP address in a <code>ContextData</code> parameter with the authenticated API operations <code>AdminInitiateAuth</code> and <code>AdminRespondToAuthChallenge</code>.</p>
+        /// <p>You can only activate <code>EnablePropagateAdditionalUserContextData</code> in an app client that has a client secret. For more information about propagation of user context data, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html#user-pool-settings-adaptive-authentication-device-fingerprint">Adding user device and session data to API requests</a>.</p>
+        pub fn enable_propagate_additional_user_context_data(mut self, input: bool) -> Self {
+            self.enable_propagate_additional_user_context_data = Some(input);
+            self
+        }
+        /// <p>When <code>EnablePropagateAdditionalUserContextData</code> is true, Amazon Cognito accepts an <code>IpAddress</code> value that you send in the <code>UserContextData</code> parameter. The <code>UserContextData</code> parameter sends information to Amazon Cognito advanced security for risk analysis. You can send <code>UserContextData</code> when you sign in Amazon Cognito native users with the <code>InitiateAuth</code> and <code>RespondToAuthChallenge</code> API operations.</p>
+        /// <p>When <code>EnablePropagateAdditionalUserContextData</code> is false, you can't send your user's source IP address to Amazon Cognito advanced security with unauthenticated API operations. <code>EnablePropagateAdditionalUserContextData</code> doesn't affect whether you can send a source IP address in a <code>ContextData</code> parameter with the authenticated API operations <code>AdminInitiateAuth</code> and <code>AdminRespondToAuthChallenge</code>.</p>
+        /// <p>You can only activate <code>EnablePropagateAdditionalUserContextData</code> in an app client that has a client secret. For more information about propagation of user context data, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html#user-pool-settings-adaptive-authentication-device-fingerprint">Adding user device and session data to API requests</a>.</p>
+        pub fn set_enable_propagate_additional_user_context_data(
+            mut self,
+            input: std::option::Option<bool>,
+        ) -> Self {
+            self.enable_propagate_additional_user_context_data = input;
+            self
+        }
         /// Consumes the builder and constructs a [`UserPoolClientType`](crate::model::UserPoolClientType)
         pub fn build(self) -> crate::model::UserPoolClientType {
             crate::model::UserPoolClientType {
@@ -937,6 +971,8 @@ pub mod user_pool_client_type {
                 analytics_configuration: self.analytics_configuration,
                 prevent_user_existence_errors: self.prevent_user_existence_errors,
                 enable_token_revocation: self.enable_token_revocation,
+                enable_propagate_additional_user_context_data: self
+                    .enable_propagate_additional_user_context_data,
             }
         }
     }
@@ -1055,6 +1091,7 @@ impl std::fmt::Debug for AnalyticsConfigurationType {
 }
 /// See [`AnalyticsConfigurationType`](crate::model::AnalyticsConfigurationType)
 pub mod analytics_configuration_type {
+
     /// A builder for [`AnalyticsConfigurationType`](crate::model::AnalyticsConfigurationType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1292,23 +1329,23 @@ impl AsRef<str> for ExplicitAuthFlowsType {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TokenValidityUnitsType {
-    /// <p> A time unit in “seconds”, “minutes”, “hours”, or “days” for the value in AccessTokenValidity, defaulting to hours.</p>
+    /// <p> A time unit of <code>seconds</code>, <code>minutes</code>, <code>hours</code>, or <code>days</code> for the value that you set in the <code>AccessTokenValidity</code> parameter. The default <code>AccessTokenValidity</code> time unit is hours.</p>
     pub access_token: std::option::Option<crate::model::TimeUnitsType>,
-    /// <p>A time unit in “seconds”, “minutes”, “hours”, or “days” for the value in IdTokenValidity, defaulting to hours.</p>
+    /// <p>A time unit of <code>seconds</code>, <code>minutes</code>, <code>hours</code>, or <code>days</code> for the value that you set in the <code>IdTokenValidity</code> parameter. The default <code>IdTokenValidity</code> time unit is hours.</p>
     pub id_token: std::option::Option<crate::model::TimeUnitsType>,
-    /// <p>A time unit in “seconds”, “minutes”, “hours”, or “days” for the value in RefreshTokenValidity, defaulting to days.</p>
+    /// <p>A time unit of <code>seconds</code>, <code>minutes</code>, <code>hours</code>, or <code>days</code> for the value that you set in the <code>RefreshTokenValidity</code> parameter. The default <code>RefreshTokenValidity</code> time unit is days.</p>
     pub refresh_token: std::option::Option<crate::model::TimeUnitsType>,
 }
 impl TokenValidityUnitsType {
-    /// <p> A time unit in “seconds”, “minutes”, “hours”, or “days” for the value in AccessTokenValidity, defaulting to hours.</p>
+    /// <p> A time unit of <code>seconds</code>, <code>minutes</code>, <code>hours</code>, or <code>days</code> for the value that you set in the <code>AccessTokenValidity</code> parameter. The default <code>AccessTokenValidity</code> time unit is hours.</p>
     pub fn access_token(&self) -> std::option::Option<&crate::model::TimeUnitsType> {
         self.access_token.as_ref()
     }
-    /// <p>A time unit in “seconds”, “minutes”, “hours”, or “days” for the value in IdTokenValidity, defaulting to hours.</p>
+    /// <p>A time unit of <code>seconds</code>, <code>minutes</code>, <code>hours</code>, or <code>days</code> for the value that you set in the <code>IdTokenValidity</code> parameter. The default <code>IdTokenValidity</code> time unit is hours.</p>
     pub fn id_token(&self) -> std::option::Option<&crate::model::TimeUnitsType> {
         self.id_token.as_ref()
     }
-    /// <p>A time unit in “seconds”, “minutes”, “hours”, or “days” for the value in RefreshTokenValidity, defaulting to days.</p>
+    /// <p>A time unit of <code>seconds</code>, <code>minutes</code>, <code>hours</code>, or <code>days</code> for the value that you set in the <code>RefreshTokenValidity</code> parameter. The default <code>RefreshTokenValidity</code> time unit is days.</p>
     pub fn refresh_token(&self) -> std::option::Option<&crate::model::TimeUnitsType> {
         self.refresh_token.as_ref()
     }
@@ -1324,6 +1361,7 @@ impl std::fmt::Debug for TokenValidityUnitsType {
 }
 /// See [`TokenValidityUnitsType`](crate::model::TokenValidityUnitsType)
 pub mod token_validity_units_type {
+
     /// A builder for [`TokenValidityUnitsType`](crate::model::TokenValidityUnitsType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1333,12 +1371,12 @@ pub mod token_validity_units_type {
         pub(crate) refresh_token: std::option::Option<crate::model::TimeUnitsType>,
     }
     impl Builder {
-        /// <p> A time unit in “seconds”, “minutes”, “hours”, or “days” for the value in AccessTokenValidity, defaulting to hours.</p>
+        /// <p> A time unit of <code>seconds</code>, <code>minutes</code>, <code>hours</code>, or <code>days</code> for the value that you set in the <code>AccessTokenValidity</code> parameter. The default <code>AccessTokenValidity</code> time unit is hours.</p>
         pub fn access_token(mut self, input: crate::model::TimeUnitsType) -> Self {
             self.access_token = Some(input);
             self
         }
-        /// <p> A time unit in “seconds”, “minutes”, “hours”, or “days” for the value in AccessTokenValidity, defaulting to hours.</p>
+        /// <p> A time unit of <code>seconds</code>, <code>minutes</code>, <code>hours</code>, or <code>days</code> for the value that you set in the <code>AccessTokenValidity</code> parameter. The default <code>AccessTokenValidity</code> time unit is hours.</p>
         pub fn set_access_token(
             mut self,
             input: std::option::Option<crate::model::TimeUnitsType>,
@@ -1346,12 +1384,12 @@ pub mod token_validity_units_type {
             self.access_token = input;
             self
         }
-        /// <p>A time unit in “seconds”, “minutes”, “hours”, or “days” for the value in IdTokenValidity, defaulting to hours.</p>
+        /// <p>A time unit of <code>seconds</code>, <code>minutes</code>, <code>hours</code>, or <code>days</code> for the value that you set in the <code>IdTokenValidity</code> parameter. The default <code>IdTokenValidity</code> time unit is hours.</p>
         pub fn id_token(mut self, input: crate::model::TimeUnitsType) -> Self {
             self.id_token = Some(input);
             self
         }
-        /// <p>A time unit in “seconds”, “minutes”, “hours”, or “days” for the value in IdTokenValidity, defaulting to hours.</p>
+        /// <p>A time unit of <code>seconds</code>, <code>minutes</code>, <code>hours</code>, or <code>days</code> for the value that you set in the <code>IdTokenValidity</code> parameter. The default <code>IdTokenValidity</code> time unit is hours.</p>
         pub fn set_id_token(
             mut self,
             input: std::option::Option<crate::model::TimeUnitsType>,
@@ -1359,12 +1397,12 @@ pub mod token_validity_units_type {
             self.id_token = input;
             self
         }
-        /// <p>A time unit in “seconds”, “minutes”, “hours”, or “days” for the value in RefreshTokenValidity, defaulting to days.</p>
+        /// <p>A time unit of <code>seconds</code>, <code>minutes</code>, <code>hours</code>, or <code>days</code> for the value that you set in the <code>RefreshTokenValidity</code> parameter. The default <code>RefreshTokenValidity</code> time unit is days.</p>
         pub fn refresh_token(mut self, input: crate::model::TimeUnitsType) -> Self {
             self.refresh_token = Some(input);
             self
         }
-        /// <p>A time unit in “seconds”, “minutes”, “hours”, or “days” for the value in RefreshTokenValidity, defaulting to days.</p>
+        /// <p>A time unit of <code>seconds</code>, <code>minutes</code>, <code>hours</code>, or <code>days</code> for the value that you set in the <code>RefreshTokenValidity</code> parameter. The default <code>RefreshTokenValidity</code> time unit is days.</p>
         pub fn set_refresh_token(
             mut self,
             input: std::option::Option<crate::model::TimeUnitsType>,
@@ -1474,6 +1512,7 @@ impl std::fmt::Debug for AccountRecoverySettingType {
 }
 /// See [`AccountRecoverySettingType`](crate::model::AccountRecoverySettingType)
 pub mod account_recovery_setting_type {
+
     /// A builder for [`AccountRecoverySettingType`](crate::model::AccountRecoverySettingType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1545,6 +1584,7 @@ impl std::fmt::Debug for RecoveryOptionType {
 }
 /// See [`RecoveryOptionType`](crate::model::RecoveryOptionType)
 pub mod recovery_option_type {
+
     /// A builder for [`RecoveryOptionType`](crate::model::RecoveryOptionType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1675,6 +1715,7 @@ impl std::fmt::Debug for UserPoolAddOnsType {
 }
 /// See [`UserPoolAddOnsType`](crate::model::UserPoolAddOnsType)
 pub mod user_pool_add_ons_type {
+
     /// A builder for [`UserPoolAddOnsType`](crate::model::UserPoolAddOnsType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1823,6 +1864,7 @@ impl std::fmt::Debug for AdminCreateUserConfigType {
 }
 /// See [`AdminCreateUserConfigType`](crate::model::AdminCreateUserConfigType)
 pub mod admin_create_user_config_type {
+
     /// A builder for [`AdminCreateUserConfigType`](crate::model::AdminCreateUserConfigType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1927,6 +1969,7 @@ impl std::fmt::Debug for MessageTemplateType {
 }
 /// See [`MessageTemplateType`](crate::model::MessageTemplateType)
 pub mod message_template_type {
+
     /// A builder for [`MessageTemplateType`](crate::model::MessageTemplateType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2029,6 +2072,7 @@ impl std::fmt::Debug for SmsConfigurationType {
 }
 /// See [`SmsConfigurationType`](crate::model::SmsConfigurationType)
 pub mod sms_configuration_type {
+
     /// A builder for [`SmsConfigurationType`](crate::model::SmsConfigurationType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2222,6 +2266,7 @@ impl std::fmt::Debug for EmailConfigurationType {
 }
 /// See [`EmailConfigurationType`](crate::model::EmailConfigurationType)
 pub mod email_configuration_type {
+
     /// A builder for [`EmailConfigurationType`](crate::model::EmailConfigurationType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2487,6 +2532,7 @@ impl std::fmt::Debug for DeviceConfigurationType {
 }
 /// See [`DeviceConfigurationType`](crate::model::DeviceConfigurationType)
 pub mod device_configuration_type {
+
     /// A builder for [`DeviceConfigurationType`](crate::model::DeviceConfigurationType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2604,7 +2650,7 @@ impl AsRef<str> for UserPoolMfaType {
     }
 }
 
-/// <p>The settings for updates to user attributes.</p>
+/// <p>The settings for updates to user attributes. These settings include the property <code>AttributesRequireVerificationBeforeUpdate</code>, a user-pool setting that tells Amazon Cognito how to handle changes to the value of your users' email address and phone number attributes. For more information, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-email-phone-verification.html#user-pool-settings-verifications-verify-attribute-updates"> Verifying updates to to email addresses and phone numbers</a>.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UserAttributeUpdateSettingsType {
@@ -2637,6 +2683,7 @@ impl std::fmt::Debug for UserAttributeUpdateSettingsType {
 }
 /// See [`UserAttributeUpdateSettingsType`](crate::model::UserAttributeUpdateSettingsType)
 pub mod user_attribute_update_settings_type {
+
     /// A builder for [`UserAttributeUpdateSettingsType`](crate::model::UserAttributeUpdateSettingsType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2803,6 +2850,7 @@ impl std::fmt::Debug for VerificationMessageTemplateType {
 }
 /// See [`VerificationMessageTemplateType`](crate::model::VerificationMessageTemplateType)
 pub mod verification_message_template_type {
+
     /// A builder for [`VerificationMessageTemplateType`](crate::model::VerificationMessageTemplateType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3078,6 +3126,7 @@ impl std::fmt::Debug for LambdaConfigType {
 }
 /// See [`LambdaConfigType`](crate::model::LambdaConfigType)
 pub mod lambda_config_type {
+
     /// A builder for [`LambdaConfigType`](crate::model::LambdaConfigType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3329,6 +3378,7 @@ impl std::fmt::Debug for CustomEmailLambdaVersionConfigType {
 }
 /// See [`CustomEmailLambdaVersionConfigType`](crate::model::CustomEmailLambdaVersionConfigType)
 pub mod custom_email_lambda_version_config_type {
+
     /// A builder for [`CustomEmailLambdaVersionConfigType`](crate::model::CustomEmailLambdaVersionConfigType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3462,6 +3512,7 @@ impl std::fmt::Debug for CustomSmsLambdaVersionConfigType {
 }
 /// See [`CustomSmsLambdaVersionConfigType`](crate::model::CustomSmsLambdaVersionConfigType)
 pub mod custom_sms_lambda_version_config_type {
+
     /// A builder for [`CustomSmsLambdaVersionConfigType`](crate::model::CustomSmsLambdaVersionConfigType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3586,6 +3637,7 @@ impl std::fmt::Debug for UserPoolPolicyType {
 }
 /// See [`UserPoolPolicyType`](crate::model::UserPoolPolicyType)
 pub mod user_pool_policy_type {
+
     /// A builder for [`UserPoolPolicyType`](crate::model::UserPoolPolicyType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3685,6 +3737,7 @@ impl std::fmt::Debug for PasswordPolicyType {
 }
 /// See [`PasswordPolicyType`](crate::model::PasswordPolicyType)
 pub mod password_policy_type {
+
     /// A builder for [`PasswordPolicyType`](crate::model::PasswordPolicyType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3822,6 +3875,7 @@ impl std::fmt::Debug for CodeDeliveryDetailsType {
 }
 /// See [`CodeDeliveryDetailsType`](crate::model::CodeDeliveryDetailsType)
 pub mod code_delivery_details_type {
+
     /// A builder for [`CodeDeliveryDetailsType`](crate::model::CodeDeliveryDetailsType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3968,6 +4022,7 @@ impl std::fmt::Debug for AttributeType {
 }
 /// See [`AttributeType`](crate::model::AttributeType)
 pub mod attribute_type {
+
     /// A builder for [`AttributeType`](crate::model::AttributeType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4055,6 +4110,7 @@ impl std::fmt::Debug for ResourceServerType {
 }
 /// See [`ResourceServerType`](crate::model::ResourceServerType)
 pub mod resource_server_type {
+
     /// A builder for [`ResourceServerType`](crate::model::ResourceServerType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4162,6 +4218,7 @@ impl std::fmt::Debug for ResourceServerScopeType {
 }
 /// See [`ResourceServerScopeType`](crate::model::ResourceServerScopeType)
 pub mod resource_server_scope_type {
+
     /// A builder for [`ResourceServerScopeType`](crate::model::ResourceServerScopeType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4382,6 +4439,7 @@ impl std::fmt::Debug for IdentityProviderType {
 }
 /// See [`IdentityProviderType`](crate::model::IdentityProviderType)
 pub mod identity_provider_type {
+
     /// A builder for [`IdentityProviderType`](crate::model::IdentityProviderType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4793,6 +4851,7 @@ impl std::fmt::Debug for GroupType {
 }
 /// See [`GroupType`](crate::model::GroupType)
 pub mod group_type {
+
     /// A builder for [`GroupType`](crate::model::GroupType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5143,6 +5202,7 @@ impl std::fmt::Debug for UserImportJobType {
 }
 /// See [`UserImportJobType`](crate::model::UserImportJobType)
 pub mod user_import_job_type {
+
     /// A builder for [`UserImportJobType`](crate::model::UserImportJobType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5448,15 +5508,21 @@ impl AsRef<str> for UserImportJobStatusType {
     }
 }
 
-/// <p>Information that your app generates about a user's <code>AdminInitiateAuth</code> or <code>AdminRespondToAuthChallenge</code> session. Amazon Cognito advanced security features calculate risk levels for user sessions based on this context data.</p>
+/// <p>Contextual data, such as the user's device fingerprint, IP address, or location, used for evaluating the risk of an unexpected event by Amazon Cognito advanced security.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UserContextDataType {
-    /// <p>Contextual data, such as the user's device fingerprint, IP address, or location, used for evaluating the risk of an unexpected event by Amazon Cognito advanced security.</p>
+    /// <p>The source IP address of your user's device.</p>
+    pub ip_address: std::option::Option<std::string::String>,
+    /// <p>Encoded device-fingerprint details that your app collected with the Amazon Cognito context data collection library. For more information, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html#user-pool-settings-adaptive-authentication-device-fingerprint">Adding user device and session data to API requests</a>.</p>
     pub encoded_data: std::option::Option<std::string::String>,
 }
 impl UserContextDataType {
-    /// <p>Contextual data, such as the user's device fingerprint, IP address, or location, used for evaluating the risk of an unexpected event by Amazon Cognito advanced security.</p>
+    /// <p>The source IP address of your user's device.</p>
+    pub fn ip_address(&self) -> std::option::Option<&str> {
+        self.ip_address.as_deref()
+    }
+    /// <p>Encoded device-fingerprint details that your app collected with the Amazon Cognito context data collection library. For more information, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html#user-pool-settings-adaptive-authentication-device-fingerprint">Adding user device and session data to API requests</a>.</p>
     pub fn encoded_data(&self) -> std::option::Option<&str> {
         self.encoded_data.as_deref()
     }
@@ -5464,25 +5530,38 @@ impl UserContextDataType {
 impl std::fmt::Debug for UserContextDataType {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         let mut formatter = f.debug_struct("UserContextDataType");
+        formatter.field("ip_address", &self.ip_address);
         formatter.field("encoded_data", &self.encoded_data);
         formatter.finish()
     }
 }
 /// See [`UserContextDataType`](crate::model::UserContextDataType)
 pub mod user_context_data_type {
+
     /// A builder for [`UserContextDataType`](crate::model::UserContextDataType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
+        pub(crate) ip_address: std::option::Option<std::string::String>,
         pub(crate) encoded_data: std::option::Option<std::string::String>,
     }
     impl Builder {
-        /// <p>Contextual data, such as the user's device fingerprint, IP address, or location, used for evaluating the risk of an unexpected event by Amazon Cognito advanced security.</p>
+        /// <p>The source IP address of your user's device.</p>
+        pub fn ip_address(mut self, input: impl Into<std::string::String>) -> Self {
+            self.ip_address = Some(input.into());
+            self
+        }
+        /// <p>The source IP address of your user's device.</p>
+        pub fn set_ip_address(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.ip_address = input;
+            self
+        }
+        /// <p>Encoded device-fingerprint details that your app collected with the Amazon Cognito context data collection library. For more information, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html#user-pool-settings-adaptive-authentication-device-fingerprint">Adding user device and session data to API requests</a>.</p>
         pub fn encoded_data(mut self, input: impl Into<std::string::String>) -> Self {
             self.encoded_data = Some(input.into());
             self
         }
-        /// <p>Contextual data, such as the user's device fingerprint, IP address, or location, used for evaluating the risk of an unexpected event by Amazon Cognito advanced security.</p>
+        /// <p>Encoded device-fingerprint details that your app collected with the Amazon Cognito context data collection library. For more information, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html#user-pool-settings-adaptive-authentication-device-fingerprint">Adding user device and session data to API requests</a>.</p>
         pub fn set_encoded_data(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.encoded_data = input;
             self
@@ -5490,6 +5569,7 @@ pub mod user_context_data_type {
         /// Consumes the builder and constructs a [`UserContextDataType`](crate::model::UserContextDataType)
         pub fn build(self) -> crate::model::UserContextDataType {
             crate::model::UserContextDataType {
+                ip_address: self.ip_address,
                 encoded_data: self.encoded_data,
             }
         }
@@ -5525,6 +5605,7 @@ impl std::fmt::Debug for AnalyticsMetadataType {
 }
 /// See [`AnalyticsMetadataType`](crate::model::AnalyticsMetadataType)
 pub mod analytics_metadata_type {
+
     /// A builder for [`AnalyticsMetadataType`](crate::model::AnalyticsMetadataType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5589,6 +5670,7 @@ impl std::fmt::Debug for MfaOptionType {
 }
 /// See [`MfaOptionType`](crate::model::MfaOptionType)
 pub mod mfa_option_type {
+
     /// A builder for [`MfaOptionType`](crate::model::MfaOptionType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5661,6 +5743,7 @@ impl std::fmt::Debug for SoftwareTokenMfaConfigType {
 }
 /// See [`SoftwareTokenMfaConfigType`](crate::model::SoftwareTokenMfaConfigType)
 pub mod software_token_mfa_config_type {
+
     /// A builder for [`SoftwareTokenMfaConfigType`](crate::model::SoftwareTokenMfaConfigType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5725,6 +5808,7 @@ impl std::fmt::Debug for SmsMfaConfigType {
 }
 /// See [`SmsMfaConfigType`](crate::model::SmsMfaConfigType)
 pub mod sms_mfa_config_type {
+
     /// A builder for [`SmsMfaConfigType`](crate::model::SmsMfaConfigType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5804,6 +5888,7 @@ impl std::fmt::Debug for SoftwareTokenMfaSettingsType {
 }
 /// See [`SoftwareTokenMfaSettingsType`](crate::model::SoftwareTokenMfaSettingsType)
 pub mod software_token_mfa_settings_type {
+
     /// A builder for [`SoftwareTokenMfaSettingsType`](crate::model::SoftwareTokenMfaSettingsType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5877,6 +5962,7 @@ impl std::fmt::Debug for SmsMfaSettingsType {
 }
 /// See [`SmsMfaSettingsType`](crate::model::SmsMfaSettingsType)
 pub mod sms_mfa_settings_type {
+
     /// A builder for [`SmsMfaSettingsType`](crate::model::SmsMfaSettingsType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5985,6 +6071,7 @@ impl std::fmt::Debug for UiCustomizationType {
 }
 /// See [`UiCustomizationType`](crate::model::UiCustomizationType)
 pub mod ui_customization_type {
+
     /// A builder for [`UiCustomizationType`](crate::model::UiCustomizationType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6170,6 +6257,7 @@ impl std::fmt::Debug for RiskConfigurationType {
 }
 /// See [`RiskConfigurationType`](crate::model::RiskConfigurationType)
 pub mod risk_configuration_type {
+
     /// A builder for [`RiskConfigurationType`](crate::model::RiskConfigurationType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6316,6 +6404,7 @@ impl std::fmt::Debug for RiskExceptionConfigurationType {
 }
 /// See [`RiskExceptionConfigurationType`](crate::model::RiskExceptionConfigurationType)
 pub mod risk_exception_configuration_type {
+
     /// A builder for [`RiskExceptionConfigurationType`](crate::model::RiskExceptionConfigurationType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6409,6 +6498,7 @@ impl std::fmt::Debug for AccountTakeoverRiskConfigurationType {
 }
 /// See [`AccountTakeoverRiskConfigurationType`](crate::model::AccountTakeoverRiskConfigurationType)
 pub mod account_takeover_risk_configuration_type {
+
     /// A builder for [`AccountTakeoverRiskConfigurationType`](crate::model::AccountTakeoverRiskConfigurationType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6498,6 +6588,7 @@ impl std::fmt::Debug for AccountTakeoverActionsType {
 }
 /// See [`AccountTakeoverActionsType`](crate::model::AccountTakeoverActionsType)
 pub mod account_takeover_actions_type {
+
     /// A builder for [`AccountTakeoverActionsType`](crate::model::AccountTakeoverActionsType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6606,6 +6697,7 @@ impl std::fmt::Debug for AccountTakeoverActionType {
 }
 /// See [`AccountTakeoverActionType`](crate::model::AccountTakeoverActionType)
 pub mod account_takeover_action_type {
+
     /// A builder for [`AccountTakeoverActionType`](crate::model::AccountTakeoverActionType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6785,6 +6877,7 @@ impl std::fmt::Debug for NotifyConfigurationType {
 }
 /// See [`NotifyConfigurationType`](crate::model::NotifyConfigurationType)
 pub mod notify_configuration_type {
+
     /// A builder for [`NotifyConfigurationType`](crate::model::NotifyConfigurationType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6922,6 +7015,7 @@ impl std::fmt::Debug for NotifyEmailType {
 }
 /// See [`NotifyEmailType`](crate::model::NotifyEmailType)
 pub mod notify_email_type {
+
     /// A builder for [`NotifyEmailType`](crate::model::NotifyEmailType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7007,6 +7101,7 @@ impl std::fmt::Debug for CompromisedCredentialsRiskConfigurationType {
 }
 /// See [`CompromisedCredentialsRiskConfigurationType`](crate::model::CompromisedCredentialsRiskConfigurationType)
 pub mod compromised_credentials_risk_configuration_type {
+
     /// A builder for [`CompromisedCredentialsRiskConfigurationType`](crate::model::CompromisedCredentialsRiskConfigurationType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7087,6 +7182,7 @@ impl std::fmt::Debug for CompromisedCredentialsActionsType {
 }
 /// See [`CompromisedCredentialsActionsType`](crate::model::CompromisedCredentialsActionsType)
 pub mod compromised_credentials_actions_type {
+
     /// A builder for [`CompromisedCredentialsActionsType`](crate::model::CompromisedCredentialsActionsType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7297,6 +7393,7 @@ impl std::fmt::Debug for AuthenticationResultType {
 }
 /// See [`AuthenticationResultType`](crate::model::AuthenticationResultType)
 pub mod authentication_result_type {
+
     /// A builder for [`AuthenticationResultType`](crate::model::AuthenticationResultType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7424,6 +7521,7 @@ impl std::fmt::Debug for NewDeviceMetadataType {
 }
 /// See [`NewDeviceMetadataType`](crate::model::NewDeviceMetadataType)
 pub mod new_device_metadata_type {
+
     /// A builder for [`NewDeviceMetadataType`](crate::model::NewDeviceMetadataType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7651,6 +7749,7 @@ impl std::fmt::Debug for UserType {
 }
 /// See [`UserType`](crate::model::UserType)
 pub mod user_type {
+
     /// A builder for [`UserType`](crate::model::UserType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7940,6 +8039,7 @@ impl std::fmt::Debug for UserPoolDescriptionType {
 }
 /// See [`UserPoolDescriptionType`](crate::model::UserPoolDescriptionType)
 pub mod user_pool_description_type {
+
     /// A builder for [`UserPoolDescriptionType`](crate::model::UserPoolDescriptionType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8132,6 +8232,7 @@ impl std::fmt::Debug for UserPoolClientDescription {
 }
 /// See [`UserPoolClientDescription`](crate::model::UserPoolClientDescription)
 pub mod user_pool_client_description {
+
     /// A builder for [`UserPoolClientDescription`](crate::model::UserPoolClientDescription)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8231,6 +8332,7 @@ impl std::fmt::Debug for ProviderDescription {
 }
 /// See [`ProviderDescription`](crate::model::ProviderDescription)
 pub mod provider_description {
+
     /// A builder for [`ProviderDescription`](crate::model::ProviderDescription)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8366,6 +8468,7 @@ impl std::fmt::Debug for DeviceType {
 }
 /// See [`DeviceType`](crate::model::DeviceType)
 pub mod device_type {
+
     /// A builder for [`DeviceType`](crate::model::DeviceType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8621,6 +8724,7 @@ impl std::fmt::Debug for DomainDescriptionType {
 }
 /// See [`DomainDescriptionType`](crate::model::DomainDescriptionType)
 pub mod domain_description_type {
+
     /// A builder for [`DomainDescriptionType`](crate::model::DomainDescriptionType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8855,7 +8959,7 @@ pub struct UserPoolType {
         std::option::Option<crate::model::VerificationMessageTemplateType>,
     /// <p>The contents of the SMS authentication message.</p>
     pub sms_authentication_message: std::option::Option<std::string::String>,
-    /// <p></p>
+    /// <p>The settings for updates to user attributes. These settings include the property <code>AttributesRequireVerificationBeforeUpdate</code>, a user-pool setting that tells Amazon Cognito how to handle changes to the value of your users' email address and phone number attributes. For more information, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-email-phone-verification.html#user-pool-settings-verifications-verify-attribute-updates"> Verifying updates to to email addresses and phone numbers</a>.</p>
     pub user_attribute_update_settings:
         std::option::Option<crate::model::UserAttributeUpdateSettingsType>,
     /// <p>Can be one of the following values:</p>
@@ -8982,7 +9086,7 @@ impl UserPoolType {
     pub fn sms_authentication_message(&self) -> std::option::Option<&str> {
         self.sms_authentication_message.as_deref()
     }
-    /// <p></p>
+    /// <p>The settings for updates to user attributes. These settings include the property <code>AttributesRequireVerificationBeforeUpdate</code>, a user-pool setting that tells Amazon Cognito how to handle changes to the value of your users' email address and phone number attributes. For more information, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-email-phone-verification.html#user-pool-settings-verifications-verify-attribute-updates"> Verifying updates to to email addresses and phone numbers</a>.</p>
     pub fn user_attribute_update_settings(
         &self,
     ) -> std::option::Option<&crate::model::UserAttributeUpdateSettingsType> {
@@ -9141,6 +9245,7 @@ impl std::fmt::Debug for UserPoolType {
 }
 /// See [`UserPoolType`](crate::model::UserPoolType)
 pub mod user_pool_type {
+
     /// A builder for [`UserPoolType`](crate::model::UserPoolType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9419,7 +9524,7 @@ pub mod user_pool_type {
             self.sms_authentication_message = input;
             self
         }
-        /// <p></p>
+        /// <p>The settings for updates to user attributes. These settings include the property <code>AttributesRequireVerificationBeforeUpdate</code>, a user-pool setting that tells Amazon Cognito how to handle changes to the value of your users' email address and phone number attributes. For more information, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-email-phone-verification.html#user-pool-settings-verifications-verify-attribute-updates"> Verifying updates to to email addresses and phone numbers</a>.</p>
         pub fn user_attribute_update_settings(
             mut self,
             input: crate::model::UserAttributeUpdateSettingsType,
@@ -9427,7 +9532,7 @@ pub mod user_pool_type {
             self.user_attribute_update_settings = Some(input);
             self
         }
-        /// <p></p>
+        /// <p>The settings for updates to user attributes. These settings include the property <code>AttributesRequireVerificationBeforeUpdate</code>, a user-pool setting that tells Amazon Cognito how to handle changes to the value of your users' email address and phone number attributes. For more information, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-email-phone-verification.html#user-pool-settings-verifications-verify-attribute-updates"> Verifying updates to to email addresses and phone numbers</a>.</p>
         pub fn set_user_attribute_update_settings(
             mut self,
             input: std::option::Option<crate::model::UserAttributeUpdateSettingsType>,
@@ -9788,6 +9893,7 @@ impl std::fmt::Debug for UsernameConfigurationType {
 }
 /// See [`UsernameConfigurationType`](crate::model::UsernameConfigurationType)
 pub mod username_configuration_type {
+
     /// A builder for [`UsernameConfigurationType`](crate::model::UsernameConfigurationType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10048,6 +10154,7 @@ impl std::fmt::Debug for SchemaAttributeType {
 }
 /// See [`SchemaAttributeType`](crate::model::SchemaAttributeType)
 pub mod schema_attribute_type {
+
     /// A builder for [`SchemaAttributeType`](crate::model::SchemaAttributeType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10206,6 +10313,7 @@ impl std::fmt::Debug for StringAttributeConstraintsType {
 }
 /// See [`StringAttributeConstraintsType`](crate::model::StringAttributeConstraintsType)
 pub mod string_attribute_constraints_type {
+
     /// A builder for [`StringAttributeConstraintsType`](crate::model::StringAttributeConstraintsType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10279,6 +10387,7 @@ impl std::fmt::Debug for NumberAttributeConstraintsType {
 }
 /// See [`NumberAttributeConstraintsType`](crate::model::NumberAttributeConstraintsType)
 pub mod number_attribute_constraints_type {
+
     /// A builder for [`NumberAttributeConstraintsType`](crate::model::NumberAttributeConstraintsType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10415,6 +10524,7 @@ impl std::fmt::Debug for DeviceSecretVerifierConfigType {
 }
 /// See [`DeviceSecretVerifierConfigType`](crate::model::DeviceSecretVerifierConfigType)
 pub mod device_secret_verifier_config_type {
+
     /// A builder for [`DeviceSecretVerifierConfigType`](crate::model::DeviceSecretVerifierConfigType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10466,7 +10576,7 @@ impl DeviceSecretVerifierConfigType {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContextDataType {
-    /// <p>Source IP address of your user.</p>
+    /// <p>The source IP address of your user's device.</p>
     pub ip_address: std::option::Option<std::string::String>,
     /// <p>Your server endpoint where this API is invoked.</p>
     pub server_name: std::option::Option<std::string::String>,
@@ -10474,11 +10584,11 @@ pub struct ContextDataType {
     pub server_path: std::option::Option<std::string::String>,
     /// <p>HttpHeaders received on your server in same order.</p>
     pub http_headers: std::option::Option<std::vec::Vec<crate::model::HttpHeader>>,
-    /// <p>Encoded data containing device fingerprinting details collected using the Amazon Cognito context data collection library.</p>
+    /// <p>Encoded device-fingerprint details that your app collected with the Amazon Cognito context data collection library. For more information, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html#user-pool-settings-adaptive-authentication-device-fingerprint">Adding user device and session data to API requests</a>.</p>
     pub encoded_data: std::option::Option<std::string::String>,
 }
 impl ContextDataType {
-    /// <p>Source IP address of your user.</p>
+    /// <p>The source IP address of your user's device.</p>
     pub fn ip_address(&self) -> std::option::Option<&str> {
         self.ip_address.as_deref()
     }
@@ -10494,7 +10604,7 @@ impl ContextDataType {
     pub fn http_headers(&self) -> std::option::Option<&[crate::model::HttpHeader]> {
         self.http_headers.as_deref()
     }
-    /// <p>Encoded data containing device fingerprinting details collected using the Amazon Cognito context data collection library.</p>
+    /// <p>Encoded device-fingerprint details that your app collected with the Amazon Cognito context data collection library. For more information, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html#user-pool-settings-adaptive-authentication-device-fingerprint">Adding user device and session data to API requests</a>.</p>
     pub fn encoded_data(&self) -> std::option::Option<&str> {
         self.encoded_data.as_deref()
     }
@@ -10512,6 +10622,7 @@ impl std::fmt::Debug for ContextDataType {
 }
 /// See [`ContextDataType`](crate::model::ContextDataType)
 pub mod context_data_type {
+
     /// A builder for [`ContextDataType`](crate::model::ContextDataType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10523,12 +10634,12 @@ pub mod context_data_type {
         pub(crate) encoded_data: std::option::Option<std::string::String>,
     }
     impl Builder {
-        /// <p>Source IP address of your user.</p>
+        /// <p>The source IP address of your user's device.</p>
         pub fn ip_address(mut self, input: impl Into<std::string::String>) -> Self {
             self.ip_address = Some(input.into());
             self
         }
-        /// <p>Source IP address of your user.</p>
+        /// <p>The source IP address of your user's device.</p>
         pub fn set_ip_address(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.ip_address = input;
             self
@@ -10572,12 +10683,12 @@ pub mod context_data_type {
             self.http_headers = input;
             self
         }
-        /// <p>Encoded data containing device fingerprinting details collected using the Amazon Cognito context data collection library.</p>
+        /// <p>Encoded device-fingerprint details that your app collected with the Amazon Cognito context data collection library. For more information, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html#user-pool-settings-adaptive-authentication-device-fingerprint">Adding user device and session data to API requests</a>.</p>
         pub fn encoded_data(mut self, input: impl Into<std::string::String>) -> Self {
             self.encoded_data = Some(input.into());
             self
         }
-        /// <p>Encoded data containing device fingerprinting details collected using the Amazon Cognito context data collection library.</p>
+        /// <p>Encoded device-fingerprint details that your app collected with the Amazon Cognito context data collection library. For more information, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html#user-pool-settings-adaptive-authentication-device-fingerprint">Adding user device and session data to API requests</a>.</p>
         pub fn set_encoded_data(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.encoded_data = input;
             self
@@ -10630,6 +10741,7 @@ impl std::fmt::Debug for HttpHeader {
 }
 /// See [`HttpHeader`](crate::model::HttpHeader)
 pub mod http_header {
+
     /// A builder for [`HttpHeader`](crate::model::HttpHeader)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10748,6 +10860,7 @@ impl std::fmt::Debug for AuthEventType {
 }
 /// See [`AuthEventType`](crate::model::AuthEventType)
 pub mod auth_event_type {
+
     /// A builder for [`AuthEventType`](crate::model::AuthEventType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10928,6 +11041,7 @@ impl std::fmt::Debug for EventFeedbackType {
 }
 /// See [`EventFeedbackType`](crate::model::EventFeedbackType)
 pub mod event_feedback_type {
+
     /// A builder for [`EventFeedbackType`](crate::model::EventFeedbackType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10994,7 +11108,7 @@ impl EventFeedbackType {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EventContextDataType {
-    /// <p>The user's IP address.</p>
+    /// <p>The source IP address of your user's device.</p>
     pub ip_address: std::option::Option<std::string::String>,
     /// <p>The user's device name.</p>
     pub device_name: std::option::Option<std::string::String>,
@@ -11006,7 +11120,7 @@ pub struct EventContextDataType {
     pub country: std::option::Option<std::string::String>,
 }
 impl EventContextDataType {
-    /// <p>The user's IP address.</p>
+    /// <p>The source IP address of your user's device.</p>
     pub fn ip_address(&self) -> std::option::Option<&str> {
         self.ip_address.as_deref()
     }
@@ -11040,6 +11154,7 @@ impl std::fmt::Debug for EventContextDataType {
 }
 /// See [`EventContextDataType`](crate::model::EventContextDataType)
 pub mod event_context_data_type {
+
     /// A builder for [`EventContextDataType`](crate::model::EventContextDataType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11051,12 +11166,12 @@ pub mod event_context_data_type {
         pub(crate) country: std::option::Option<std::string::String>,
     }
     impl Builder {
-        /// <p>The user's IP address.</p>
+        /// <p>The source IP address of your user's device.</p>
         pub fn ip_address(mut self, input: impl Into<std::string::String>) -> Self {
             self.ip_address = Some(input.into());
             self
         }
-        /// <p>The user's IP address.</p>
+        /// <p>The source IP address of your user's device.</p>
         pub fn set_ip_address(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.ip_address = input;
             self
@@ -11149,6 +11264,7 @@ impl std::fmt::Debug for ChallengeResponseType {
 }
 /// See [`ChallengeResponseType`](crate::model::ChallengeResponseType)
 pub mod challenge_response_type {
+
     /// A builder for [`ChallengeResponseType`](crate::model::ChallengeResponseType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11348,6 +11464,7 @@ impl std::fmt::Debug for EventRiskType {
 }
 /// See [`EventRiskType`](crate::model::EventRiskType)
 pub mod event_risk_type {
+
     /// A builder for [`EventRiskType`](crate::model::EventRiskType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11681,6 +11798,7 @@ impl std::fmt::Debug for ProviderUserIdentifierType {
 }
 /// See [`ProviderUserIdentifierType`](crate::model::ProviderUserIdentifierType)
 pub mod provider_user_identifier_type {
+
     /// A builder for [`ProviderUserIdentifierType`](crate::model::ProviderUserIdentifierType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
